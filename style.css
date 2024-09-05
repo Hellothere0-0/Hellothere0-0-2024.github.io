@@ -56,11 +56,11 @@ header{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-   
+    transition: width 3s ease;
 }
 
-#Home1:hover{
-     animation: 3s ease 0s infinite Home1;
+#Home1.animated {
+     animation: 3s ease 0s 1 Home1;
 }
 
 
@@ -112,4 +112,75 @@ header{
     font-size: x-large;
     font-weight: 600;
     padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        padding: 10px 10px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    
+    .navbar a{
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-family:'Poppins',sans-serif ;
+        font-weight: 1000;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    
+    .navbar a::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: black;
+        transition: 0.3s;
+    }
+    
+    .navbar a:hover::before{
+        width: 100%;
+    }
+    
+    #Home1{
+        font-family:'Poppins',sans-serif ;
+        font-weight: 800;
+        font-size: 40px;
+        color: white;
+        border: 5px solid;
+        border-radius: 100px;
+        padding: 40px;
+        width: 270px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+       
+    }
+
+    #Home2{
+        font-family:'Poppins',sans-serif ;
+        font-weight: 800;
+        font-size: 20px;
+        color: white;
+        border: 5px solid;
+        border-radius: 100px;
+        padding: 15px;
+        width: 200px;
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
