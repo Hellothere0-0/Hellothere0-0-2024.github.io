@@ -56,7 +56,19 @@ header{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+   
 }
+
+#Home1:hover{
+     animation: 3s ease 0s infinite Home1;
+}
+
+
+
+@keyframes Home1 {
+    50%{width: 1000px;}
+}
+
 
 #Home2{
     font-family:'Poppins',sans-serif ;
